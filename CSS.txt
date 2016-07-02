@@ -1,0 +1,58 @@
+July 2, 2016
+
+Adding CSS to HTML via external sheet:
+	Add a reference to the sheet in the head:
+	<head> 
+		<title> CSS Cross Country</title>
+		<link rel-"stylesheet" href="styles.css"/>
+	</head>
+
+Selectors:
+	Element Selectors: tag
+	Class Selectors: .classname
+	ID Selectors #idname
+Cascade Order:
+	1) Style priority is determined by position on the site:
+		Least Important:
+			External <link>
+			In the <head>
+			Inline style attributes
+			Using !important
+		Most Important:
+	2) Where the style is positioned on the style sheet.
+		In the casade, the item downstreams override items upstream
+Float Properity:
+	- Removes element from normal document flow and move them to the edge of the parent container 
+	- Other content with the parent flows around the float item
+	- If items must break-line, their order in the HTML will determine which will be pushed to the new line. Same if all item have the same float property
+
+Clearing Floats:
+	- You must clear a float, if the float could be larger than the parent container
+	- All children are floating
+	Three methods to clear a float:
+		1) Clear with a element, but adding clear to the item beneath your floated item. Any item from a previous container will not overlap on the subsquent item
+			- Issues: 
+				- Will not stay if you need to rearrange the order of the items later
+				- If the parent of your floated item is smaller than your floated object. The background/border will not extend
+		2) Manual clearing, adding an element in the parent only to clear. (clear:both;)}
+			- Issues:
+				- You're adding an empty element
+				- Might not be necessary later, if you decide to remove the float
+		3) Clearfix (MOST RECOMMENDED), it adds a group class within any elements that contains a float element.
+Inheritance & Specificity:
+	Inheritance:
+		All children within a parent inherits the parent style unless it's overwritten.
+		- To override, add a nested selector: 
+			.featured p {
+				color: #fff; 
+			}
+	Specificity:
+		0, 0, 0, 0 - weighing out specificity 
+		inline-style, # of ID, # of class, # elements
+
+
+
+
+
+
+

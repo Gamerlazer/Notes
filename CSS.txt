@@ -50,6 +50,68 @@ Inheritance & Specificity:
 		0, 0, 0, 0 - weighing out specificity 
 		inline-style, # of ID, # of class, # elements
 
+The Box Model:
+	An imaginary diagram that outlines each DOM element
+		1) Content Area
+		2) Padding Area
+		3) Boarder Area
+		4) Margin Area
+	Width:
+		Total calculated box width:
+			content width + padding width + border width
+		- To Adapt design, take total box width subtract padding and border width to get width (content width)
+	Overflow Property:
+		overflow: visible [default] / auto / hidden / scroll
+
+Positioning:
+	Position Property:
+		position: static / relative / absolute / fixed
+	Any element NOT static is considered a positioned element.
+
+Z-Index:
+	Position items in front of one another
+
+Staying DRY: Don't Repeat Yourself
+	Selector combination:
+		p, .ski_lift, h6 {
+			font-size: 12px;
+		}
+	Style shorthand: 
+		margin or padding: 
+			- top right bottom left
+			- top right&left bottom
+			- top&bottom right&left
+		font: size/line-height weight style family
+		background: color image repeat x-pos y-pos
+		list-style: style position image
+		border: width style color
+
+Display Types:
+	- How elements interact on the page
+	display: none / block / inline / inline-block
+
+	Block elements:
+		- Stretch full width of their container
+		- Behaves like there is a line break before and after the element
+		- Full box model
+	Inline elements:
+		- Typically found within block-level elements
+		- Only takes up space of the content inside
+		- Does not create a line break before or after the content
+	Inline-Block:
+		- Can implement full box model
+		- Work inline other elements, does not take up full width of container
+Centering:
+	Block-level element:
+		margin: 0 auto; <- will center the object regardless
+	Inline and Inline-Block:
+		text-align: center;
+
+
+
+
+
+
 
 
 
